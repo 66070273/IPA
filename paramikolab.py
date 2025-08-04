@@ -16,7 +16,7 @@ for name, ip in devices.items():
     ssh.connect(
         hostname=ip,
         username="admin",
-        key_filename="/home/youruser/.ssh/id_rsa",  # ← แก้ให้ตรง path จริง
+        key_filename="/home/youruser/.ssh/id_rsa",
         look_for_keys=True
     )
 

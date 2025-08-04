@@ -1,0 +1,21 @@
+devices:
+  - name: R1
+    host: 172.31.144.4
+    loopback: 1.1.1.1
+    interfaces:
+      - name: G0/1
+        ip: 10.1.1.1
+        mask: 255.255.255.0
+      - name: G0/2
+        ip: 10.2.1.1
+        mask: 255.255.255.0
+  - name: R2
+    host: 172.31.144.5
+    loopback: 2.2.2.2
+    interfaces:
+      - name: G0/1
+        ip: 10.1.1.2
+        mask: 255.255.255.0
+      - name: G0/2
+        ip: 10.2.1.2
+        mask: 255.255.255.0

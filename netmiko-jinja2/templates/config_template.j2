@@ -1,0 +1,14 @@
+hostname {{ name }}
+
+{% for iface in interfaces %}
+interface {{ iface.name }}
+ ip address {{ iface.ip }} {{ iface.mask }}
+ no shutdown
+{% endfor %}
+
+interface Loopback0
+ ip address {{ loopback }} 255.255.255.255
+
+router ospf 1 vrf control-data
+ network 10.0.0.0 0.255.255.255 area 0
+ network {{ loopback }} 0.0.0.0 area 0
